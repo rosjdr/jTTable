@@ -29,8 +29,8 @@ public class Teacher {
     }
 
     @Override
-    public boolean equals(Object arg0) {
-        return ((Teacher)arg0).id == this.id;
+    public boolean equals(Object obj) {
+        return ((Teacher)obj).id == this.id;
     }
 
     @Override
