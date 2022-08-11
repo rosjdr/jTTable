@@ -28,7 +28,7 @@ public class JttableApplication implements CommandLineRunner {
         Teacher teacher1 = new Teacher("Rodrigo", 1L, constraints);
         Subject sub1 = new Subject(1L, "Matemática", "MAT", 2, teacher1);
         constraints = new int[] {1,1,0,0,1,0,1,1,0,0};
-        Teacher teacher2 = new Teacher("Joao", 1L, constraints);
+        Teacher teacher2 = new Teacher("Joao", 2L, constraints);
         Subject sub2 = new Subject(2L, "Português", "POR", 2, teacher2);
     }
 }
