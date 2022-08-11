@@ -2,6 +2,9 @@ package br.com.tremdeprogramador.jttable;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+import br.com.tremdeprogramador.jttable.model.Teacher;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.CommandLineRunner;
@@ -20,10 +23,8 @@ public class JttableApplication implements CommandLineRunner {
  
     @Override
     public void run(String... args) {
-        LOG.info("EXECUTING : command line runner");
- 
-        for (int i = 0; i < args.length; ++i) {
-            LOG.info("args[{}]: {}", i, args[i]);
-        }
+        int[] constraints = {0, 0, 1,1,0,0,0,0,1,1};
+        Teacher teacher = new Teacher("Rodrigo", 1L, constraints);
+        LOG.info(teacher.toString());
     }
 }
