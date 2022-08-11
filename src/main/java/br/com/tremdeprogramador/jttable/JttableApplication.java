@@ -25,6 +25,9 @@ public class JttableApplication implements CommandLineRunner {
     public void run(String... args) {
         int[] constraints = {0, 0, 1,1,0,0,0,0,1,1};
         Teacher teacher = new Teacher("Rodrigo", 1L, constraints);
+        
+
+
         LOG.info(teacher.toString());
     }
 }
