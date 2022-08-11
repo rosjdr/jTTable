@@ -3,6 +3,7 @@ package br.com.tremdeprogramador.jttable;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+import br.com.tremdeprogramador.jttable.model.Subject;
 import br.com.tremdeprogramador.jttable.model.Teacher;
 
 import org.slf4j.Logger;
@@ -23,11 +24,11 @@ public class JttableApplication implements CommandLineRunner {
  
     @Override
     public void run(String... args) {
-        int[] constraints = {0, 0, 1,1,0,0,0,0,1,1};
-        Teacher teacher = new Teacher("Rodrigo", 1L, constraints);
-        
-
-
-        LOG.info(teacher.toString());
+        int[] constraints = {0,0,1,1,0,0,0,0,1,1};
+        Teacher teacher1 = new Teacher("Rodrigo", 1L, constraints);
+        Subject sub1 = new Subject(1L, "Matemática", "MAT", 2, teacher1);
+        constraints = new int[] {1,1,0,0,1,0,1,1,0,0};
+        Teacher teacher2 = new Teacher("Joao", 1L, constraints);
+        Subject sub2 = new Subject(2L, "Português", "POR", 2, teacher2);
     }
 }

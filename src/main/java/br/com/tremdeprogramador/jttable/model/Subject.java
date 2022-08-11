@@ -9,15 +9,17 @@ public class Subject {
     private String name;
     private String initials;
     private int workload;
+    private Teacher teacher;
 
     public Subject() {
     }
 
-    public Subject(Long id, String name, String initials, int workload) {
+    public Subject(Long id, String name, String initials, int workload, Teacher teacher) {
         this.id = id;
         this.name = name;
         this.initials = initials;
         this.workload = workload;
+        this.teacher = teacher;
     }
 
     @Override
